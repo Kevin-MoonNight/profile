@@ -1,19 +1,20 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Profile from '../components/profile';
 
 const Home: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Profile</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-    </div>
-  )
-}
+	return (
+		<div>
+			<Head>
+				<title>鄭政文的個人網站</title>
+				<meta name="description" content="" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-export default Home
+			<Profile />
+
+		</div>
+	)
+};
+
+export default Home;
