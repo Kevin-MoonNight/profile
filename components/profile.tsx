@@ -2,6 +2,15 @@ import Container from "./container";
 import Image from 'next/image';
 import headShotPic from '../public/images/headshot.jpg';
 
+const name = "Cheng Cheng-Wen";
+
+const email = "k0937477331@gmail.com";
+
+const description = 
+    "I'm Kevin, I've been studying programming since I was in high school," +
+    "and I've participated some programming competitions and gotten some good results," +
+    "now I'm working in lab.";
+
 const Profile = () => {
     return (
         <Container className="flex items-center justify-center">
@@ -19,16 +28,14 @@ const Profile = () => {
                         </div>
 
                         <h1 className="pt-8 text-3xl font-bold lg:pt-0">
-                            Cheng Cheng-Wen
+                            {name}
                         </h1>
                         <p className="pt-4 text-base font-bold">
-                            k0937477331@gmail.com
+                            {email}
                         </p>
 
                         <p className="pt-8 ">
-                            I'm Kevin, I've been studying programming since I was in high school,
-                            and I've participated some programming competitions and gotten some good results,
-                            now I'm working in lab.
+                            {description}
                         </p>
 
                         <div className="pt-12 pb-8">
