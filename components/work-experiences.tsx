@@ -27,33 +27,45 @@ const workExperiences: WorkExperienceProps[] = [
 
 const WorkExperiences = () => {
     return (
-        <Container className="flex items-center justify-center">
-            <div className="w-full max-w-5xl select-none">
+        <Container className="flex justify-center">
+            <div id="work experiences" className="w-full max-w-5xl select-none">
                 <div className="font-sans antialiased leading-normal tracking-wider text-left text-gray-900">
                     <h2 className="px-4 py-2 text-4xl font-bold tracking-widest border-2 border-black max-w-fit">
                         Work Experiences
                     </h2>
                     <ul className="mt-8 space-y-3 font-normal">
-                        {workExperiences.map((item: WorkExperienceProps) => (
-                            <li key={item.title} className="p-2">
-                                <p className="text-2xl font-semibold">
-                                    {item.title}
-                                </p>
-
-                                <div className="mt-2 text-base">
-                                    <p className="text-gray-700">
-                                        {item.tech} {item.type} {item.date}
-                                    </p>
-                                    <p className="mt-4">
-                                        {item.description}
-                                    </p>
-                                </div>
-                            </li>
-                        ))}
+                        {
+                            workExperiences.map((item: WorkExperienceProps) => (
+                                <li key={item.title} className="p-2">
+                                    <WorkExperienceItem data={item} />
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </div>
         </Container>
+    );
+};
+
+const WorkExperienceItem = (props: { data: WorkExperienceProps }) => {
+    const { data } = props;
+
+    return (
+        <>
+            <p className="text-2xl font-semibold">
+                {data.title}
+            </p>
+
+            <div className="mt-2 text-base">
+                <p className="text-gray-700">
+                    {data.tech} {data.type} {data.date}
+                </p>
+                <p className="mt-4">
+                    {data.description}
+                </p>
+            </div>
+        </>
     );
 };
 
