@@ -1,18 +1,18 @@
 import Container from "./container";
 
-const frontendItems = [
+const frontend: string[] = [
     "React.js (TypeScript) (intermediate)",
     "Vue.js (intermediate)",
     "TailwindCSS (advanced)",
     "Next.js (basic)"
 ];
 
-const backendItems = [
+const backend: string[] = [
     "Laravel (advanced)",
     "ASP.NET Core (intermediate)"
 ];
 
-const otherItems = [
+const other: string[] = [
     "Git (advanced)",
     "Docker (intermediate)",
     "MySQL",
@@ -32,42 +32,42 @@ const Skills = () => {
                             <h3 className="p-2 mt-8 text-2xl font-semibold lg:mt-0">
                                 Frontend
                             </h3>
-                            <ul className="mt-4 space-y-3 text-lg font-normal tracking-normal">
-                                {frontendItems.map((item: string) => (
-                                    <li key={item} className="p-2">
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                            <SkillItems data={frontend} />
                         </div>
                         <div className="col-span-full sm:col-span-6 lg:col-span-4">
                             <h3 className="p-2 mt-8 text-2xl font-semibold lg:mt-0">
                                 Backend
                             </h3>
-                            <ul className="mt-4 space-y-3 text-lg font-normal tracking-normal">
-                                {backendItems.map((item: string) => (
-                                    <li key={item} className="p-2">
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                            <SkillItems data={backend} />
                         </div>
                         <div className="col-span-full sm:col-span-6 lg:col-span-4">
                             <h3 className="p-2 mt-8 text-2xl font-semibold lg:mt-0">
                                 Other
                             </h3>
-                            <ul className="mt-4 space-y-3 text-lg font-normal tracking-normal">
-                                {otherItems.map((item: string) => (
-                                    <li key={item} className="p-2">
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                            <SkillItems data={other} />
                         </div>
                     </div>
                 </div>
             </div>
         </Container>
+    );
+};
+
+const SkillItems = (props: { data: string[] }) => {
+    const { data } = props;
+
+    return (
+        <>
+            <ul className="mt-4 space-y-3 text-lg font-normal tracking-normal">
+                {
+                    data.map((item: string) => (
+                        <li key={item} className="p-2">
+                            {item}
+                        </li>
+                    ))
+                }
+            </ul>
+        </>
     );
 };
 
