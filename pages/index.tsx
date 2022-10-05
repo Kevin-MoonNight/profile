@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Awards from '../components/awards';
 import Education from '../components/education';
 import Profile from '../components/profile';
+import Projects from '../components/projects';
 import Skills from '../components/skills';
 import WorkExperiences from '../components/work-experiences';
 
@@ -13,10 +14,12 @@ const Home: NextPage = () => {
 			<Education />
 			
 			<WorkExperiences />
-			
+
 			<Awards />
 
 			<Skills />
+
+			<Projects />
 		</div>
 	)
 };
