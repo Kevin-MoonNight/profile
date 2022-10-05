@@ -5,7 +5,7 @@ interface AwardProps {
     awards: string[]
 };
 
-const AwardItems: AwardProps[] = [
+const awards: AwardProps[] = [
     {
         year: 2021,
         awards: [
@@ -31,23 +31,37 @@ const Awards = () => {
                         Awards
                     </h2>
                     <ul className="mt-8 space-y-3 font-normal">
-                        {AwardItems.map((item: AwardProps) => (
-                            <li key={item.year} className="p-2">
-                                <p className="text-3xl font-semibold">{item.year}</p>
-
-                                <div className="mt-4 space-y-2 text-xl">
-                                    {item.awards.map((award: string) => (
-                                        <p key={award} className="p-2 ml-4">
-                                            {award}
-                                        </p>
-                                    ))}
-                                </div>
-                            </li>
-                        ))}
+                        {
+                            awards.map((item: AwardProps) => (
+                                <li key={item.year} className="p-2">
+                                    <AwardItem data={item} />
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </div>
         </Container>
+    );
+};
+
+const AwardItem = (props: { data: AwardProps }) => {
+    const { data } = props;
+
+    return (
+        <>
+            <p className="text-3xl font-semibold">{data.year}</p>
+
+            <div className="mt-4 space-y-2 text-xl">
+                {
+                    data.awards.map((award: string) => (
+                        <p key={award} className="p-2 ml-4">
+                            {award}
+                        </p>
+                    ))
+                }
+            </div>
+        </>
     );
 };
 
