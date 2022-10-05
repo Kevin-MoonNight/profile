@@ -1,8 +1,9 @@
 import type { NextPage } from 'next';
-import Awards from '../components/Awards';
-import Education from '../components/Education';
+import Awards from '../components/awards';
+import Education from '../components/education';
 import Profile from '../components/profile';
 import Skills from '../components/skills';
+import WorkExperiences from '../components/work-experiences';
 
 const Home: NextPage = () => {
 	return (
@@ -10,6 +11,8 @@ const Home: NextPage = () => {
 			<Profile />
 			
 			<Education />
+			
+			<WorkExperiences />
 			
 			<Awards />
 
