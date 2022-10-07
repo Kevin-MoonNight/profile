@@ -24,7 +24,7 @@ const Skills = () => {
         <Container className="flex justify-center">
             <div className="w-full max-w-5xl select-none">
                 <div className="font-sans antialiased leading-normal tracking-wider text-left text-gray-900">
-                    <h2 className="px-4 py-2 text-4xl font-bold tracking-widest text-white bg-black max-w-min">
+                    <h2 className="px-4 py-2 text-4xl font-bold tracking-widest border-2 border-black max-w-min">
                         Skills
                     </h2>
                     <div className="grid grid-cols-12 gap-6 lg:mt-8">

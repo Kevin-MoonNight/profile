@@ -56,9 +56,9 @@ const projects: ProjectProps[] = [
 const Projects = () => {
     return (
         <Container className="flex items-center justify-center">
-            <div id="projects" className="w-full max-w-5xl select-none">
+            <div className="w-full max-w-5xl select-none">
                 <div className="font-sans antialiased leading-normal tracking-wider text-left text-gray-900">
-                    <h2 className="px-4 py-2 mx-auto text-4xl font-bold tracking-widest border-2 border-black max-w-fit">
+                    <h2 className="px-4 py-2 mx-auto text-4xl font-bold tracking-widest text-white bg-black max-w-fit">
                         Projects
                     </h2>
                     <ul className="mt-8 space-y-4 font-normal">

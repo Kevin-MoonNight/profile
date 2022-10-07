@@ -28,7 +28,7 @@ const workExperiences: WorkExperienceProps[] = [
 const WorkExperiences = () => {
     return (
         <Container className="flex justify-center">
-            <div id="work experiences" className="w-full max-w-5xl select-none">
+            <div className="w-full max-w-5xl select-none">
                 <div className="font-sans antialiased leading-normal tracking-wider text-left text-gray-900">
                     <h2 className="px-4 py-2 text-4xl font-bold tracking-widest border-2 border-black max-w-fit">
                         Work Experiences

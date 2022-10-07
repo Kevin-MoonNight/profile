@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>鄭政文的個人網站</title>
+                <title>Cheng Cheng-Wen Personal Website</title>
                 <meta name="description" content="" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
