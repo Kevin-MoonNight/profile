@@ -5,6 +5,7 @@ import Education from '../components/education';
 import Navigation, { navigations } from '../components/navigation';
 import Profile from '../components/profile';
 import Projects from '../components/projects';
+import ScrollToTop from '../components/scroll-to-top';
 import Skills from '../components/skills';
 import WorkExperiences from '../components/work-experiences';
 
@@ -34,6 +35,8 @@ const Home: NextPage = () => {
 			<div className="">
 				<Navigation watching={watching} />
 			</div>
+			
+			<ScrollToTop />
 
 			<section id="profile">
 				<Profile />
