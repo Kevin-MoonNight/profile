@@ -73,7 +73,9 @@ const ContactButton = () => {
         <>
             <button className="px-4 py-2 font-bold text-black transition-all bg-white border-2 border-black hover:text-white hover:bg-black">
                 <span className="text-lg traking-wide">
-                    Contact Me
+                    <a href="https://moonnight.software/" rel="noreferrer" target="_blank">
+                        Contact Me
+                    </a>
                 </span>
             </button>
         </>
